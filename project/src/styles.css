@@ -1,0 +1,176 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-20px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: url(./Component/240126-us-weather-noaa-al-0901-f13bfb.jpg);
+  
+  
+}
+
+.App {
+  animation: fadeIn 1s ease-in-out;
+  max-width: 800px;
+  margin: 20px auto;
+  background: #000000d0; 
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(207, 202, 202, 0.1);
+}
+
+h1 {
+color: white;
+  text-align: center; 
+  animation: fadeInUp 1s ease-in-out;
+}
+
+h2 {
+  text-align: center;
+  color:rgba(248, 31, 23, 0.87);
+  animation: fadeInUp 1s ease-in-out;
+  
+}
+
+#header2 {
+  text-align: center; 
+  color: #f7f2f2;
+}
+
+label {
+  color: whitesmoke;
+  text-align: center; 
+  font-weight: bold;
+  font-size: 2em;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+#unit {
+  border-radius: 20px;
+  padding: 4%;
+  padding-left: 30%;
+  
+}
+
+input {
+  padding: 18px;
+  margin-right: 10px;
+  border-radius: 10px;
+  margin-left: 2%;
+  width: 60%; 
+  background-color: #3a3636d0;
+  color: #ecf0f1;
+  transition: background-color 0.3s ease;
+}
+input:hover {
+  background-color: #2c2a2a; 
+}
+
+#btn {
+  padding: 3%;
+}
+
+button {
+  padding: 13px 26px;
+  background-color: #3498db; 
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  height: 70%;
+  margin-left: 2%;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+.weather-details {
+  background-color: rgb(240, 236, 233);
+  margin-top: 20px;
+  text-align: center;
+}
+
+.details p {
+  font-weight: bold;
+  
+}
+
+.details img {
+  width: 100px;
+  height: 150px;
+  margin: 0 auto; 
+}
+
+
+.forecast {
+  background-color: #dce2e6;
+  margin-top: 20px;
+  font-size: medium;
+  max-height: 300px; 
+  overflow-y: auto;
+}
+
+.forecast-item {
+  margin-bottom: 10px;
+  padding: 10px;
+  background: #000000d0;
+  border-radius: 10px;
+  color: #ecf0f1;
+}
+
+
+.forecast-item p{
+  padding-left: 33%;
+  font-size: larger;
+
+}
+.forecast-item img{
+  padding-left: 33%;
+}
+.error-message{
+  color: #ecf0f1;
+  background-color: #f30808;
+  font-size: large;
+  padding: 3%;
+  padding-left: 40%;
+  transition: background-color 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .App {
+    padding: 10px;
+  }
+
+  input {
+    width: 50%; 
+  }
+}
