@@ -31,7 +31,7 @@ const App = () => {
       setError(null); 
 
     } catch (error) {
-      console.error('Error fetching weather data:', error);
+      
       setWeatherData(null);
       setError('City not found'); 
     }
@@ -44,7 +44,6 @@ const App = () => {
       );
       setForecastData(forecastResponse.data.list);
     } catch (error) {
-      console.error('Error fetching forecast data:', error);
       setForecastData([]);
     }
   };
@@ -54,7 +53,7 @@ const App = () => {
       fetchData();
       fetchForecast();
     }
-  }, [city, unit]);
+  }, [] );
 
   return (
     <div className="App">
@@ -79,7 +78,6 @@ const App = () => {
       )}
 
       <div id='current'>
-        
         <Forecast data={forecastData} unit={unit} cityName={city} />
       </div>
     </div>
